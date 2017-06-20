@@ -1,0 +1,12 @@
+Query:
+    type: object
+    config:
+        description: "A video from SRF"
+        fields:
+            video:
+                type: "Video"
+                args:
+                    id:
+                        description: "id of the video"
+                        type: "String!"
+                resolve: ["AppBundle\\VideoResolver", "resolveVideo"]

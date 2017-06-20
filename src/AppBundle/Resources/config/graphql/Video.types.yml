@@ -1,0 +1,11 @@
+Video:
+  type: object
+  config:
+    description: "Represents a video"
+    fields:
+      id:
+        type: "String!"
+        description: "The id of the video"
+      title:
+        type: "String"
+        description: "The title of the video"
