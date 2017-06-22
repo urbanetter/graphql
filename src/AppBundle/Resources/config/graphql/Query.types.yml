@@ -3,10 +3,24 @@ Query:
     config:
         description: "A video from SRF"
         fields:
+            show:
+                type: "Show"
+                args:
+                    id:
+                        description: "id of the show"
+                        type: "String!"
+                resolve: ["AppBundle\\Resolver", "resolveShow"]
+            episode:
+                type: "Episode"
+                args:
+                    id:
+                        description: "id of the episode"
+                        type: "String!"
+                resolve: ["AppBundle\\Resolver", "resolveEpisode"]
             video:
                 type: "Video"
                 args:
                     id:
                         description: "id of the video"
                         type: "String!"
-                resolve: ["AppBundle\\VideoResolver", "resolveVideo"]
+                resolve: ["AppBundle\\Resolver", "resolveVideo"]

@@ -1,0 +1,22 @@
+Show:
+  type: object
+  config:
+    description: "Represents a show"
+    fields:
+      id:
+        type: "String!"
+        description: "The id of the show"
+      title:
+        type: "String"
+        description: "The title of the show"
+      episodes:
+        type: "[Episode]"
+        args:
+            mode:
+                description: "One of 'most-clicked', 'latest', 'specific-date', default: 'latest'"
+                type: "String"
+            date:
+                description: "Date if mode 'specific-date' is choosen"
+                type: "String"
+        description: "The episodes"
+        resolve: ["AppBundle\\Resolver", "resolveEpisodes"]
