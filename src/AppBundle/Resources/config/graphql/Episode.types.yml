@@ -1,0 +1,15 @@
+Episode:
+  type: object
+  config:
+    description: "Represents an episode"
+    fields:
+      id:
+        type: "String!"
+        description: "The id of the episode"
+      title:
+        type: "String"
+        description: "The title of the episode"
+      videos:
+        type: "[Video]"
+        description: "The videos of the episode"
+        resolve: ["AppBundle\\Resolver", "resolveVideos"]
